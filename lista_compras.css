@@ -1,0 +1,49 @@
+body{
+    background-color: #616161;
+    display: flex;
+    justify-content: center;
+    font-family: "Arial";
+}
+main{
+    bottom: 1 solid black;
+    border-radius: 5px;
+    background-color: #fdd835;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.card{
+    border: 0px solid rgb(128, 128, 128);
+    border-radius: 8px;
+    background-color: white;
+    width: 15%;
+    text-align: center;
+    padding: 8px;
+    box-shadow: 1px 1px 5px rgb(104, 104, 104);
+    cursor: pointer;
+    margin: 5px;
+    font-size: 8px;
+    
+
+}
+
+.card:hover{
+    opacity: 0.7;
+}
+#Pao{
+    margin-top: 15px;
+    
+}
+#Heineken{
+    width: 28px;
+    font-size: -12px;
+    margin-top: 0;
+}
+img{
+    width: 75px;
+}
