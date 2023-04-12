@@ -79,3 +79,7 @@ button:hover{
     opacity: 0.6;
     cursor: pointer;
 }
+.menor18{
+    visibility: hidden;
+    display: none;
+}

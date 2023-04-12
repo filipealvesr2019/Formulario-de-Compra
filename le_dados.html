@@ -21,6 +21,24 @@
             let url = document.location.search
             const parametros = new URLSearchParams(url);
             let nome = parametros.get("nome")
+            let tel = parametros.get("tel")
+            let end = parametros.get("endereco")
+            let dt_nasc = parametros.get("data_nasc")
+            let msg = parametros.get("mensagem")
+
+            const data = dt_nasc.split("/")
+            let dia = data[0]
+            let mes = data[1]
+            let ano = data[2]
+
+            const dataAtual = new Data()
+            const anoAtual = dataAtual.getFullYear()
+            let idade = anoAtual - ano
+
+            if (idade < 18){
+                document.getElementById("bebida1").className = "menor18"
+                document.getElementById("bebida2").className = "menor18"
+            }
         }
     </script>
 </head>
@@ -34,34 +52,34 @@
                     <img src="images/imagem.png" alt="">
                     <h4>Refrigerante</h4>
                     <h4>R$ 10,00</h4>
-                    <input type="checkbox">
+                    <input type="checkbox" onclick="adiciona_produto(Refrigerante,10,this.checked)">
                 </div>
 
-                <div class="card">
+                <div class="card" id="bebida1">
                     <img id="Heineken" src="images/cerveja heineken lata 269ml.jpg" alt="">
                     <h4>Cerveja Heineken Lata 269ml</h4>
-                    <h4>R$ 4,19</h4>
-                    <input type="checkbox">
+                    <h4>R$ 5</h4>
+                    <input type="checkbox" onclick="adiciona_produto('Cerveja Heineken Lata 269ml',5,this.checked)">
                 </div>
                 <div class="card">
                     <img id="Pao" src="images/pão de mel.jpg" alt="">
                     <h4>Pão Mel Bauducco 30g</h4>
                     <h4>R$23,89</h4>
-                    <input type="checkbox">
+                    <input type="checkbox" onclick="adiciona_produto('Pão Mel Bauducco 30g',24,this.checked)">
                 </div>
 
                 <div class="card">
                     <img src="images/schogetten alpine milk chocolate 100g.png" alt="">
                     <h4>Chocolate</h4>
                     <h4>R$ 13,00</h4>
-                    <input type="checkbox">
+                    <input type="checkbox" onclick="adiciona_produto('Chocolate',13,this.checked)">
                 </div>
 
-                <div class="card">
+                <div class="card" id="bebida2">
                     <img src="images/Cachaca-Seleta-1L.png" alt="">
                     <h4>Cachaça</h4>
                     <h4>R$ 2,00</h4>
-                    <input type="checkbox">
+                    <input type="checkbox" onclick="adiciona_produto('Cachaça',2,this.checked)">
                 </div>
             </section>
 
