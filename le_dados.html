@@ -26,14 +26,14 @@
             let dt_nasc = parametros.get("data_nasc")
             let msg = parametros.get("mensagem")
 
-            const data = dt_nasc.split("/")
+            const Data = dt_nasc.split("/")
             let dia = data[0]
             let mes = data[1]
             let ano = data[2]
 
-            const dataAtual = new Data()
+            const dataAtual = new data()
             const anoAtual = dataAtual.getFullYear()
-            let idade = anoAtual - ano
+            let idade = anoAtual - ano;
 
             if (idade < 18){
                 document.getElementById("bebida1").className = "menor18"
