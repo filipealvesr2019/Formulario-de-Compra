@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Compra</title>
     <link rel="stylesheet" href="lista_compras.css">
+    <script>
+        function adiciona_produto(nome,valor,status){
+            let total = document.getElementById("total_compra").innerHTML;
+
+            if(total){
+                document.getElementById("total_compra").innerHTML = Number(total) + Number(valor);
+            }else{
+                document.getElementById("total_compra").innerHTML = Number(total) - Number(valor);
+            }
+        }
+
+        function ler_dados(){
+            let url = document.location.search
+            const parametros = new URLSearchParams(url);
+            let nome = parametros.get("nome")
+        }
+    </script>
 </head>
 <body onload="ler_dados()">
     <main>
@@ -57,9 +74,12 @@
                 <button> Finalizar Compra</button>
                 
             </section>
-            <section></section>
-
+            
         </div>
+        <section id="voltar">
+            <a href="index.html">Voltar</a>
+        </section>
+
     </main>
 
     
